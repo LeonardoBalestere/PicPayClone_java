@@ -4,7 +4,7 @@ Api to be like picpay
 
 Based in RestFull
 
-##Tecnologies
+## Tecnologies
 
 * SpringBoot
 * SpringData
