@@ -1,6 +1,5 @@
 package com.example.picpaydemojava.model;
 
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,7 +22,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Entity
-@Table(name = "USERS")
+@Table(name = "CREDI_TCARD")
 
 public class CreditCard extends BaseEntity {
 

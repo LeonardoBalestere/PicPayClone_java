@@ -1,6 +1,8 @@
 package com.example.picpaydemojava.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.example.picpaydemojava.converter.TransactionConverter;
@@ -38,6 +40,12 @@ public class TransactionService implements ITransactionService{
 		Transaction transaction = transactionConverter.convertDTOToEntity(transactionDTO);
 		userService.validate(transaction.getDestiny(), transaction.getOrigin());
 		return transactionRepository.save(transaction);
+	}
+
+	@Override
+	public Page<TransactionDTO> list(Pageable paging, String login) {
+		Page<Transaction> transaction = transactionRepository.findByOrigin_LoginOrDestiny_Login(login,login, paging);
+		return transactionConverter.convertpageEntitytoDTO(transaction);
 	}
 	
 

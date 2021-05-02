@@ -25,11 +25,11 @@ public abstract class ResourceBase<T> {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}
 
-	protected ResponseEntity<T> successfullAnswer() {
+	protected ResponseEntity<T> answerSuccessfully() {
 		return ResponseEntity.status(HttpStatus.OK).build();
 	}
 
-	protected ResponseEntity<T> successfullAnswerWithURI(T object) {
+	protected ResponseEntity<T> answerSuccessfullyWithItem(T object) {
 		return ResponseEntity.status(HttpStatus.OK).body(object);
 	}
 
@@ -46,8 +46,8 @@ public abstract class ResourceBase<T> {
 		return ResponseEntity.badRequest().build();
 	}
 
-	protected ResponseEntity<Page<T>> answerPagedListItem(Page<T> items) {
-		return ResponseEntity.status(HttpStatus.OK).body(items);
+	protected ResponseEntity<Page<T>> answerPagedListItem(Page<T> transactions) {
+		return ResponseEntity.status(HttpStatus.OK).body(transactions);
 	}
 }
  

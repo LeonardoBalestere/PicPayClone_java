@@ -1,8 +1,10 @@
 package com.example.picpaydemojava.service;
 
-import com.example.picpaydemojava.dto.CreditCardDTO;
-import com.example.picpaydemojava.model.CreditCard;
+import org.springframework.stereotype.Service;
 
+import com.example.picpaydemojava.dto.CreditCardDTO;
+
+@Service
 public interface ICreditCardService {
 
 	CreditCardDTO save(CreditCardDTO creditCard);

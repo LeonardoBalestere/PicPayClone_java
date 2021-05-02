@@ -2,10 +2,12 @@ package com.example.picpaydemojava.converter;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.PropertyMap;
+import org.springframework.stereotype.Component;
 
 import com.example.picpaydemojava.dto.UserDTO;
 import com.example.picpaydemojava.model.User;
 
+@Component
 public class UserConverter extends ConveterBase<User,UserDTO> {
 
 	@Override
